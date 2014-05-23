@@ -15,4 +15,12 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
+	<servlet>
+    	<servlet-name>order_orderdata</servlet-name>
+    	<servlet-class>s.pizza.OrderDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>order_orderdata</servlet-name>
+		<url-pattern>/order</url-pattern>
+	</servlet-mapping>
 </web-app>
