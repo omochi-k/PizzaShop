@@ -27,11 +27,11 @@ public class OrderDataServlet extends HttpServlet {
 	            HttpServletResponse resp)
 	            throws ServletException, IOException {
 	        req.setCharacterEncoding("UTF-8");
-	        String title = req.getParameter("title");
-	        String url = req.getParameter("url");
+	        String order = req.getParameter("order");
+ 	        String url = req.getParameter("url");
 	        String comment = req.getParameter("comment");
 	        Date date = Calendar.getInstance().getTime();
-	        OrderData data = new OrderData(title,url,comment,date);
+	        OrderData data = new OrderData(order,url,comment,date);
 	        PersistenceManagerFactory factory = PMF.get();
 	        PersistenceManager manager = factory.getPersistenceManager();
 	        try {

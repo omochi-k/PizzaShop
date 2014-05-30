@@ -7,12 +7,12 @@ import javax.jdo.annotations.*;
  
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
 public class OrderData {
-    @PrimaryKey
-    @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-    private Long id;
+      @PrimaryKey
+      @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
+      private Long id;
      
     @Persistent
-    private String title;
+    private String order;
      
     @Persistent
     private String url;
@@ -22,13 +22,14 @@ public class OrderData {
      
     @Persistent
     private Date datetime;
- 
-    public OrderData(String title, String url, String comment, Date datetime) {
+
+    public OrderData(String order, String url, String comment, Date datetime) {
         super();
-        this.title = title;
+        this.order = order;
         this.url = url;
         this.comment = comment;
         this.datetime = datetime;
+        
     }
  
     public Long getId() {
@@ -39,12 +40,12 @@ public class OrderData {
         this.id = id;
     }
  
-    public String getTitle() {
-        return title;
+    public String getOrder() {
+        return order;
     }
     
-    public void setTitle(String title) {
-        this.title = title;
+    public void setOrder(String order) {
+        this.order = order;
     }
  
     public String getUrl() {
@@ -70,4 +71,5 @@ public class OrderData {
     public void setDatetime(Date datetime) {
         this.datetime = datetime;
     }
+    
 }
