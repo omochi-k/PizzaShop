@@ -5,14 +5,16 @@
 <!-- "Quirks Mode". Replacing this declaration     -->
 <!-- with a "Standards Mode" doctype is supported, -->
 <!-- but may lead to some differences in layout.   -->
+
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>PizzaShopへようこそ！</title>
+    <title>PizzaShop</title>
     <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
         <!--
         function callback(request){
+        	alert("取得開始");
             var json = eval(request.responseText);
             var res = '';
             if (json.length == 1){
@@ -21,6 +23,7 @@
                 res += '<tr><td>' + json[0].url +'</td></tr>';
                 res += '<tr><td>' + json[0].comment +'</td></tr>';
             } else {
+            	alert("取得開始");
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
                     res += '<td><a href="' + json[i].url + '">' + json[i].order + '</a></td>' +
@@ -35,7 +38,7 @@
         </script>
   </head>
   <body onload="getData(null);">
-    <h1>注文一覧</h1>
+    <h1>PizzaShopへようこそ！</h1>
      
     <table id="datatable" border="1">
       <tr>
@@ -43,6 +46,7 @@
       </tr>
     </table>
     <br>
-    <div><a href="order.html">ピザの注文</a></div>
+    <div><a href="order.html">ピザを注文する</a></div>
   </body>
 </html>
+

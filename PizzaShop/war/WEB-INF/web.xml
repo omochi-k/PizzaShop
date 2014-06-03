@@ -24,19 +24,19 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/order</url-pattern>
 	</servlet-mapping>
 		<servlet>
-    	<servlet-name>edit_orderdata</servlet-name>
+    	<servlet-name>editorder_orderdata</servlet-name>
     	<servlet-class>s.pizza.EditOrderDataServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-    	<servlet-name>edit_orderdata</servlet-name>
+    	<servlet-name>editorder_orderdata</servlet-name>
     	<url-pattern>/edit</url-pattern>
 	</servlet-mapping>
 	<servlet>
-    	<servlet-name>del_orderdata</servlet-name>
+    	<servlet-name>delorder_orderdata</servlet-name>
     	<servlet-class>s.pizza.DelOrderDataServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-    	<servlet-name>del_orderdata</servlet-name>
+    	<servlet-name>delorder_orderdata</servlet-name>
     	<url-pattern>/del</url-pattern>
 	</servlet-mapping>
 </web-app>

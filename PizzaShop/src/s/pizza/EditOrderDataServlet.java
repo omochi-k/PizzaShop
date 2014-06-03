@@ -24,7 +24,7 @@ public class EditOrderDataServlet extends HttpServlet {
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         long id = Long.parseLong(req.getParameter("id"));
-        String order = req.getParameter("title");
+        String order = req.getParameter("order");
         String url = req.getParameter("url");
         String comment = req.getParameter("comment");
         PersistenceManagerFactory factory = PMF.get();
