@@ -39,4 +39,20 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
     	<servlet-name>delorder_orderdata</servlet-name>
     	<url-pattern>/del</url-pattern>
 	</servlet-mapping>
+			<servlet>
+    	<servlet-name>clerkedit_orderdata</servlet-name>
+    	<servlet-class>s.pizza.ClerkEditDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>clerkedit_orderdata</servlet-name>
+    	<url-pattern>/cedit</url-pattern>
+	</servlet-mapping>
+	<servlet>
+    	<servlet-name>clerkdel_orderdata</servlet-name>
+    	<servlet-class>s.pizza.ClerkDelDataServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>clerkdel_orderdata</servlet-name>
+    	<url-pattern>/cdel</url-pattern>
+	</servlet-mapping>
 </web-app>

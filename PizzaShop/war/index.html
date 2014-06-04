@@ -10,43 +10,31 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>PizzaShop</title>
-    <script type="text/javascript" src="lib.js"></script>
-        <script type="text/javascript">
-        <!--
-        function callback(request){
-        	alert("取得開始");
-            var json = eval(request.responseText);
-            var res = '';
-            if (json.length == 1){
-                res += '<tr><td>' + json[0].id +'</td></tr>';
-                res += '<tr><td>' + json[0].order +'</td></tr>';
-                res += '<tr><td>' + json[0].url +'</td></tr>';
-                res += '<tr><td>' + json[0].comment +'</td></tr>';
-            } else {
-            	alert("取得開始");
-                for (var i = 0;i < json.length;i++){
-                    res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
-                    res += '<td><a href="' + json[i].url + '">' + json[i].order + '</a></td>' +
-                    '<td><a href="editorder.html?id=' + json[i].id + '">Edit</td>' +
-                    '<td><a href="delorder.html?id=' + json[i].id + '">Delete</td></tr>';
-                }
-            }
-            var obj = document.getElementById("datatable");
-            obj.innerHTML = res;
-        }
-        //-->
-        </script>
   </head>
-  <body onload="getData(null);">
+  <body>
     <h1>PizzaShopへようこそ！</h1>
-     
-    <table id="datatable" border="1">
-      <tr>
-        <td>wait...</td>
-      </tr>
-    </table>
+    <br>
+    本格的なイタリアンピッツァのお店です。<br>
+    次のページにて商品を選んで、注文する商品番号とサイズを記入してください。<br>
+    サイズは{ M(+ ¥0 ), L(+ ¥500) }の二種類です。<br>
+    ソースはすべてトマトベースです。<br>
+    新鮮な朝採れトマトを使用しております。<br> 
+    <br>
+    <br>
+    <br>
+    <h2>メニュー例</h2>
+    <ol>
+   		<li>マルゲリータ(水牛のモッツァレラチーズ、フレッシュバジリコ)</li>
+    	<li>ビスマルク(モルタデッラ、モッツァレラ、温泉卵、パルミジャーノ)</li>
+    	<li>プロシュート(モッツァレラ、生ハム、ルッコラ)</li>
+    	<li>クワトロ(モッツァレラ、ゴルゴンゾーラ、パルミジャーノ、リコッタ)</li>
+    </ol>
+    <br>
+    <br>
     <br>
     <div><a href="order.html">ピザを注文する</a></div>
+    <div><a href="rireki.html">注文履歴</a></div>
+    <div><a href="clerk.html">店舗用管理ページ</a></div>
   </body>
 </html>
 

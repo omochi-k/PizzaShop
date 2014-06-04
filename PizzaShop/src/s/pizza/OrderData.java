@@ -15,19 +15,19 @@ public class OrderData {
     private String order;
      
     @Persistent
-    private String url;
+    private String name;
      
     @Persistent
-    private String comment;
+    private String tel;
      
     @Persistent
     private Date datetime;
 
-    public OrderData(String order, String url, String comment, Date datetime) {
+    public OrderData(String order, String name, String tel, Date datetime) {
         super();
         this.order = order;
-        this.url = url;
-        this.comment = comment;
+        this.name = name;
+        this.tel = tel;
         this.datetime = datetime;
         
     }
@@ -48,20 +48,20 @@ public class OrderData {
         this.order = order;
     }
  
-    public String getUrl() {
-        return url;
+    public String getName() {
+        return name;
     }
  
-    public void setUrl(String url) {
-        this.url = url;
+    public void setName(String url) {
+        this.name = name;
     }
  
-    public String getComment() {
-        return comment;
+    public String getTel() {
+        return tel;
     }
  
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setTel(String tel) {
+        this.tel = tel;
     }
  
     public Date getDatetime() {

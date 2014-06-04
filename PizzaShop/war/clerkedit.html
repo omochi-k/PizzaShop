@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>PizzaShop</title>
+        <title>PizzaShop-Clerk</title>
     <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
         <!--
@@ -14,23 +14,24 @@
         function callback(request){
             var arr = eval(request.responseText);
             var data = arr[0];
-            var msg = '<table border="1"><tr><td>' + data.order + '</td></tr>';
-            msg += '<tr><td>' + data.name + '</td></tr>';
-            msg += '<tr><td>' + data.tel + '</td></tr></table>';
-            document.getElementById("data").innerHTML = msg;
             document.getElementById("id").value = data.id;
+            document.getElementById("order").value = data.order;
+            document.getElementById("name").value = data.name;
+            document.getElementById("tel").value = data.tel;
         }
         //-->
         </script>
     </head>
     <body onload="initial();">
-        <h1>注文の取り消し</h1>
-        <div>以下の注文を取り消しますか？</div>
-        <div id="data"></div>
-        <form method="post" action="del">
+        <h1>注文の変更</h1>
+        <table>
+        <form method="post" action="/cedit">
             <input type="hidden" id="id" name="id">
-            <input type="submit" value="削除">
+            <tr><th>ORDER:</th><td><input type="text" id="order" name="order"></td></tr>
+            <tr><th>URL:</th><td><input type="text" id="name" name="name"></td></tr>
+            <tr><th>COMMENT:</th><td><textarea id="tel" name="tel"></textarea></td></tr>
+            <tr><th></th><td><input type="submit" value="追加"></td></tr>
         </form>
-        </body>
+        </table>
+    </body>
 </html>
- 
