@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>注文の変更</title>
+        <title>PizzaShop</title>
     <script type="text/javascript" src="lib.js"></script>
         <script type="text/javascript">
         <!--
@@ -16,8 +16,8 @@
             var data = arr[0];
             document.getElementById("id").value = data.id;
             document.getElementById("order").value = data.order;
-            document.getElementById("url").value = data.url;
-            document.getElementById("comment").value = data.comment;
+            document.getElementById("name").value = data.name;
+            document.getElementById("tel").value = data.tel;
         }
         //-->
         </script>
@@ -28,8 +28,8 @@
         <form method="post" action="/edit">
             <input type="hidden" id="id" name="id">
             <tr><th>ORDER:</th><td><input type="text" id="order" name="order"></td></tr>
-            <tr><th>URL:</th><td><input type="text" id="url" name="url"></td></tr>
-            <tr><th>COMMENT:</th><td><textarea id="comment" name="comment"></textarea></td></tr>
+            <tr><th>NAME:</th><td><input type="text" id="name" name="name"></td></tr>
+            <tr><th>TEL:</th><td><textarea id="tel" name="tel"></textarea></td></tr>
             <tr><th></th><td><input type="submit" value="追加"></td></tr>
         </form>
         </table>

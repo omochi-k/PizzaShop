@@ -25,16 +25,16 @@ public class EditOrderDataServlet extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         long id = Long.parseLong(req.getParameter("id"));
         String order = req.getParameter("order");
-        String url = req.getParameter("url");
-        String comment = req.getParameter("comment");
+        String name = req.getParameter("name");
+        String tel = req.getParameter("tel");
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
         OrderData data = (OrderData)manager.getObjectById(OrderData.class,id);
         data.setOrder(order);
-        data.setUrl(url);
-        data.setComment(comment);
+        data.setName(name);
+        data.setTel(tel);
         manager.close();
-        resp.sendRedirect("/index.html");
+        resp.sendRedirect("/rireki.html");
     }
 }
 

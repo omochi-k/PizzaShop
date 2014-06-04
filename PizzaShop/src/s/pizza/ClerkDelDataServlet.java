@@ -1,3 +1,4 @@
+
 package s.pizza;
 
 import java.io.IOException;
@@ -6,7 +7,7 @@ import javax.jdo.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
  
-public class DelOrderDataServlet extends HttpServlet {
+public class ClerkDelDataServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
  
     @Override
@@ -22,12 +23,12 @@ public class DelOrderDataServlet extends HttpServlet {
             HttpServletResponse resp)
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        long id = Long.parseLong(req.getParameter("id"));
+        long id2 = Long.parseLong(req.getParameter("id"));
         PersistenceManagerFactory factory = PMF.get();
         PersistenceManager manager = factory.getPersistenceManager();
-        OrderData data = (OrderData)manager.getObjectById(OrderData.class,id);
+        OrderData data = (OrderData)manager.getObjectById(OrderData.class,id2);
         manager.deletePersistent(data);
         manager.close();
-        resp.sendRedirect("/rireki.html");
+        resp.sendRedirect("/clerk.html");
     }
 }

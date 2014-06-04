@@ -28,10 +28,10 @@ public class OrderDataServlet extends HttpServlet {
 	            throws ServletException, IOException {
 	        req.setCharacterEncoding("UTF-8");
 	        String order = req.getParameter("order");
- 	        String url = req.getParameter("url");
-	        String comment = req.getParameter("comment");
+ 	        String name = req.getParameter("name");
+	        String tel = req.getParameter("tel");
 	        Date date = Calendar.getInstance().getTime();
-	        OrderData data = new OrderData(order,url,comment,date);
+	        OrderData data = new OrderData(order,name,tel,date);
 	        PersistenceManagerFactory factory = PMF.get();
 	        PersistenceManager manager = factory.getPersistenceManager();
 	        try {
@@ -39,6 +39,6 @@ public class OrderDataServlet extends HttpServlet {
 	        } finally {
 	            manager.close();
 	        }
-	        resp.sendRedirect("/index.html");
+	        resp.sendRedirect("/endorder.html");
 	    }
 }
